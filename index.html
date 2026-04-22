@@ -3,56 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر الأثاث</title>
+    <title>متجر الأثاث الإلكتروني</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>اهلا بكم في متجر الأثاث</h1>
-        <nav>
-            <ul>
-                <li><a href="#home-products">الأثاث المنزلي</a></li>
-                <li><a href="#office-products">أثاث المكتب</a></li>
-                <li><a href="#about">حول</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">🛋️ متجر الأثاث</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#home-furniture">الأثاث المنزلي</a></li>
+                    <li><a href="#office-furniture">أثاث المكتب</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="#cart" class="cart-btn">🛒 السلة (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="home-products">
-            <h2>الأثاث المنزلي</h2>
-            <div class="product-list">
-                <div class="product">
-                    <h3>أريكة مريحة</h3>
-                    <p>سعر: 2000 ريال</p>
-                </div>
-                <div class="product">
-                    <h3>طاولة طعام حديثة</h3>
-                    <p>سعر: 1500 ريال</p>
-                </div>
-                <!-- Add more products as needed -->
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>متجر الأثاث الإلكتروني</h1>
+            <p>اكتشف أجمل تشكيلة من الأثاث المنزلي وأثاث المكتب</p>
+            <button class="btn" onclick="document.getElementById('home-furniture').scrollIntoView()">تصفح المنتجات</button>
+        </div>
+    </section>
 
-        <section id="office-products">
-            <h2>أثاث المكتب</h2>
-            <div class="product-list">
-                <div class="product">
-                    <h3>كرسي مكتب Ergonomic</h3>
-                    <p>سعر: 1200 ريال</p>
+    <!-- Home Furniture Section -->
+    <section id="home-furniture" class="section">
+        <div class="container">
+            <h2>🏠 الأثاث المنزلي</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23E8D4C4' width='300' height='300'/%3E%3Crect x='50' y='80' width='200' height='150' fill='%238B7355' rx='10'/%3E%3Ccircle cx='100' cy='150' r='20' fill='%23D4A574'/%3E%3Ccircle cx='200' cy='150' r='20' fill='%23D4A574'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eأريكة جلدية%3C/text%3E%3C/svg%3E" alt="أريكة جلدية">
+                    <h3>أريكة جلدية فاخرة</h3>
+                    <p class="description">أريكة جلدية عالية الجودة مع وسائد مريحة</p>
+                    <p class="price">3,500 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('أريكة جلدية فاخرة', 3500)">أضف إلى السلة</button>
                 </div>
-                <div class="product">
-                    <h3>مكتب زجاجي</h3>
-                    <p>سعر: 2500 ريال</p>
-                </div>
-                <!-- Add more products as needed -->
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 متجر الأثاث</p>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F5E6D3' width='300' height='300'/%3E%3Crect x='30' y='40' width='240' height='200' fill='%23D4A574' stroke='%23333' stroke-width='3'/%3E%3Crect x='50' y='60' width='60' height='60' fill='%238B7355'/%3E%3Crect x='190' y='60' width='60' height='60' fill='%238B7355'/%3E%3Crect x='50' y='160' width='60' height='60' fill='%238B7355'/%3E%3Crect x='190' y='160' width='60' height='60' fill='%238B7355'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eطاولة الطعام%3C/text%3E%3C/svg%3E" alt="طاولة طعام">
+                    <h3>طاولة طعام خشبية</h3>
+                    <p class="description">طاولة طعام من الخشب الطبيعي تتسع لـ 6 أشخاص</p>
+                    <p class="price">2,800 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('طاولة طعام خشبية', 2800)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23E0E0E0' width='300' height='300'/%3E%3Crect x='40' y='50' width='220' height='180' fill='%23D3D3D3' stroke='%23999' stroke-width='2'/%3E%3Crect x='60' y='70' width='180' height='140' fill='%23FFFFFF' stroke='%23CCC' stroke-width='1'/%3E%3Crect x='70' y='80' width='30' height='120' fill='%23E8E8E8'/%3E%3Crect x='200' y='80' width='30' height='120' fill='%23E8E8E8'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eدولاب معدني%3C/text%3E%3C/svg%3E" alt="دولاب">
+                    <h3>دولاب تخزين معدني</h3>
+                    <p class="description">دولاب تخزين عملي مع رفوف قابلة للتعديل</p>
+                    <p class="price">1,200 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('دولاب تخزين معدني', 1200)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F0E6D2' width='300' height='300'/%3E%3Crect x='50' y='60' width='200' height='150' fill='%23C8A882' rx='15'/%3E%3Ccircle cx='75' cy='220' r='12' fill='%23333'/%3E%3Ccircle cx='150' cy='220' r='12' fill='%23333'/%3E%3Ccircle cx='225' cy='220' r='12' fill='%23333'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eسرير خشبي%3C/text%3E%3C/svg%3E" alt="سرير">
+                    <h3>سرير خشبي فاخر</h3>
+                    <p class="description">سرير مفرد من الخشب الماهوجني مع مرتبة عالية الجودة</p>
+                    <p class="price">2,200 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('سرير خشبي فاخر', 2200)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23FFF9E6' width='300' height='300'/%3E%3Crect x='50' y='80' width='200' height='120' fill='%23FFD700' stroke='%23333' stroke-width='2'/%3E%3Crect x='50' y='200' width='200' height='40' fill='%238B7355'/%3E%3Ccircle cx='100' cy='220' r='10' fill='%23333'/%3E%3Ccircle cx='200' cy='220' r='10' fill='%23333'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eكنبة قابلة للطي%3C/text%3E%3C/svg%3E" alt="كنبة">
+                    <h3>كنبة قابلة للطي</h3>
+                    <p class="description">كنبة حديثة قابلة للطي مع تخزين مدمج</p>
+                    <p class="price">1,800 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('كنبة قابلة للطي', 1800)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23E6D5C8' width='300' height='300'/%3E%3Crect x='60' y='70' width='180' height='160' fill='%23D4A574' rx='10'/%3E%3Crect x='75' y='85' width='30' height='40' fill='%238B7355'/%3E%3Crect x='125' y='85' width='30' height='40' fill='%238B7355'/%3E%3Crect x='175' y='85' width='30' height='40' fill='%238B7355'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eمكتبة خشبية%3C/text%3E%3C/svg%3E" alt="مكتبة">
+                    <h3>مكتبة خشبية 5 رفوف</h3>
+                    <p class="description">مكتبة عصرية من الخشب مع 5 رفوف تخزينية</p>
+                    <p class="price">950 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('مكتبة خشبية 5 رفوف', 950)">أضف إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Furniture Section -->
+    <section id="office-furniture" class="section section-alt">
+        <div class="container">
+            <h2>💼 أثاث المكتب</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F5F5F5' width='300' height='300'/%3E%3Crect x='80' y='60' width='140' height='100' fill='%23333333' rx='10'/%3E%3Crect x='70' y='160' width='160' height='80' fill='%23444444'/%3E%3Ccircle cx='100' cy='210' r='12' fill='%23666'/%3E%3Ccircle cx='200' cy='210' r='12' fill='%23666'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eكرسي مكتب%3C/text%3E%3C/svg%3E" alt="كرسي مكتب">
+                    <h3>كرسي مكتب إرجونومي</h3>
+                    <p class="description">كرسي مكتب قابل للتعديل مع دعم أسفل الظهر</p>
+                    <p class="price">1,500 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('كرسي مكتب إرجونومي', 1500)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23E8E8E8' width='300' height='300'/%3E%3Crect x='40' y='80' width='220' height='120' fill='%23C0C0C0' stroke='%23333' stroke-width='2'/%3E%3Crect x='50' y='200' width='200' height='30' fill='%23808080'/%3E%3Ccircle cx='100' cy='215' r='8' fill='%23333'/%3E%3Ccircle cx='200' cy='215' r='8' fill='%23333'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eمكتب معدني%3C/text%3E%3C/svg%3E" alt="مكتب">
+                    <h3>مكتب معدني حديث</h3>
+                    <p class="description">مكتب معدني بتصميم حديث مع سطح واسع</p>
+                    <p class="price">2,000 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('مكتب معدني حديث', 2000)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F0F0F0' width='300' height='300'/%3E%3Crect x='50' y='50' width='200' height='200' fill='%23D3D3D3' stroke='%23666' stroke-width='2'/%3E%3Crect x='60' y='60' width='85' height='85' fill='%23FFFFFF' stroke='%23999' stroke-width='1'/%3E%3Crect x='155' y='60' width='85' height='85' fill='%23FFFFFF' stroke='%23999' stroke-width='1'/%3E%3Crect x='60' y='155' width='85' height='85' fill='%23FFFFFF' stroke='%23999' stroke-width='1'/%3E%3Crect x='155' y='155' width='85' height='85' fill='%23FFFFFF' stroke='%23999' stroke-width='1'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eرفوف تخزين%3C/text%3E%3C/svg%3E" alt="رفوف">
+                    <h3>رفوف تخزين معدنية</h3>
+                    <p class="description">رفوف معدنية قوية لتنظيم المكتب والملفات</p>
+                    <p class="price">800 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('رفوف تخزين معدنية', 800)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23FFFACD' width='300' height='300'/%3E%3Crect x='60' y='80' width='180' height='140' fill='%23FFD700' stroke='%23DAA520' stroke-width='2' rx='5'/%3E%3Crect x='80' y='60' width='140' height='25' fill='%23DAA520'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eطاولة اجتماعات%3C/text%3E%3C/svg%3E" alt="طاولة اجتماعات">
+                    <h3>طاولة اجتماعات زجاجية</h3>
+                    <p class="description">طاولة اجتماعات زجاجية فاخرة تتسع لـ 8 أشخاص</p>
+                    <p class="price">3,500 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('طاولة اجتماعات زجاجية', 3500)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F5F5F5' width='300' height='300'/%3E%3Crect x='50' y='70' width='200' height='160' fill='%23A9A9A9' stroke='%23696969' stroke-width='2'/%3E%3Crect x='65' y='85' width='55' height='55' fill='%23DCDCDC'/%3E%3Crect x='140' y='85' width='55' height='55' fill='%23DCDCDC'/%3E%3Crect x='215' y='85' width='20' height='140' fill='%23696969'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eخزانة ملفات%3C/text%3E%3C/svg%3E" alt="خزانة ملفات">
+                    <h3>خزانة ملفات رمادية</h3>
+                    <p class="description">خزانة ملفات معدنية آمنة مع 4 أدراج</p>
+                    <p class="price">1,100 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('خزانة ملفات رمادية', 1100)">أضف إلى السلة</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23F8F8F8' width='300' height='300'/%3E%3Crect x='70' y='70' width='160' height='160' fill='%23CCCCCC' stroke='%23999' stroke-width='2' rx='8'/%3E%3Crect x='90' y='90' width='120' height='120' fill='%23FFFFFF' stroke='%23CCCCCC' stroke-width='1'/%3E%3Ctext x='150' y='280' font-size='16' text-anchor='middle' fill='%23333'%3Eسبورة بيضاء%3C/text%3E%3C/svg%3E" alt="سبورة">
+                    <h3>سبورة بيضاء ممغنطة</h3>
+                    <p class="description">سبورة بيضاء ممغنطة للمكتب والاجتماعات</p>
+                    <p class="price">350 ريال</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('سبورة بيضاء ممغنطة', 350)">أضف إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>🛒 سلة التسوق</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>المجموع: <strong id="total-price">0</strong> ريال</p>
+                <button class="btn btn-checkout" onclick="checkout()">إتمام الشراء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>📞 اتصل بنا</h2>
+            <div class="contact-info">
+                <p>📍 العنوان: الرياض، المملكة العربية السعودية</p>
+                <p>📱 الهاتف: +966 55 123 4567</p>
+                <p>📧 البريد: info@furniturestore.sa</p>
+                <p>🕐 ساعات العمل: من الأحد إلى الخميس 9:00 ص - 9:00 م</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 متجر الأثاث الإلكتروني. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
